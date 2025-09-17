@@ -1,0 +1,15 @@
+@mixin font-face($family, $filename, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url("../fonts/#{$filename}.woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face("Circe", "circe-thin", 100);
+@include font-face("Circe", "circe-light", 200);
+@include font-face("Circe", "circe-regular", 400);
+@include font-face("Circe", "circe-bold", 700);
+@include font-face("Circe", "circe-extrabold", 900);
