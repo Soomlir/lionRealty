@@ -39,7 +39,8 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 28px 23px 20px 23px;
+  padding-top: 28px;
+  padding-bottom: 20px;
 }
 
 
