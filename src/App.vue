@@ -2,6 +2,8 @@
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
 import PhotosComponent from '@/components/PhotosComponent.vue';
+import PresentComponent from '@/components/PresentComponent.vue';
+import DetailsComponent from '@/components/DetailsComponent.vue';
 </script>
 
 <template>
@@ -10,6 +12,8 @@ import PhotosComponent from '@/components/PhotosComponent.vue';
     <AboutComponent />
   </div>
   <PhotosComponent />
+  <PresentComponent />
+  <DetailsComponent />
 </template>
 
 <style scoped>
