@@ -16,11 +16,12 @@
   </section>
 </template>
 
-<style>
+<style lang="scss">
 .details {
   width: 270px;
   margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .details__image {
@@ -35,11 +36,37 @@
 }
 
 .details__text {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   font-weight: 200;
   font-size: 14px;
   line-height: 120%;
 }
 
-.details__more {}
+.details__more {
+  display: block;
+  width: 226px;
+  height: 49px;
+
+  padding: 15px 20px;
+  padding-left: 40px;
+  text-align: center;
+  color: #ebebeb;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #2489ff;
+  border-radius: 5px;
+  position: relative;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 32px;
+    width: 15px;
+    height: 18px;
+    background-image: url("../images/book.svg");
+  }
+}
 </style>

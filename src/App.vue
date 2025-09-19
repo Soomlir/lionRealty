@@ -4,6 +4,9 @@ import AboutComponent from '@/components/AboutComponent.vue';
 import PhotosComponent from '@/components/PhotosComponent.vue';
 import PresentComponent from '@/components/PresentComponent.vue';
 import DetailsComponent from '@/components/DetailsComponent.vue';
+import CreditComponent from '@/components/CreditComponent.vue';
+import AddressComponent from '@/components/AddressComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 </script>
 
 <template>
@@ -14,6 +17,9 @@ import DetailsComponent from '@/components/DetailsComponent.vue';
   <PhotosComponent />
   <PresentComponent />
   <DetailsComponent />
+  <CreditComponent />
+  <AddressComponent />
+  <FooterComponent />
 </template>
 
 <style scoped>
