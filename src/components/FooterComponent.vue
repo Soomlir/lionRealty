@@ -2,29 +2,31 @@
 
 <template>
   <footer class="footer">
-    <a class="footer__logo-link" href="#!">
-      <img src="/images/footer-logo-mobile.svg" alt="Логотип сайта.">
-    </a>
-    <a class="footer__tel" href="tel:+79788881654">+7 (978) 888-1-654</a>
-    <ul class="footer__list">
-      <li class="footer__item">
-        <a class="footer__link footer__link--viber" href="#!">
-          <span class=visually-hidden>Viber.</span>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link footer__link--whatsup" href="#!">
-          <span class=visually-hidden>Whats up.</span>
-        </a>
-      </li>
-      <li class="footer__item">
-        <a class="footer__link footer__link--telegram" href="#!">
-          <span class=visually-hidden>Telegram.</span>
-        </a>
-      </li>
-    </ul>
-    <p class="footer__atention">сайт носит исключительно информационный характер
-      и ни при каких условиях не является публичной офертой</p>
+    <div class="footer__wrap">
+      <a class="footer__logo-link" href="#!">
+        <img src="/images/footer-logo-mobile.svg" alt="Логотип сайта.">
+      </a>
+      <a class="footer__tel" href="tel:+79788881654">+7 (978) 888-1-654</a>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link footer__link--viber" href="#!">
+            <span class=visually-hidden>Viber.</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link footer__link--whatsup" href="#!">
+            <span class=visually-hidden>Whats up.</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link footer__link--telegram" href="#!">
+            <span class=visually-hidden>Telegram.</span>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__atention">сайт носит исключительно информационный характер
+        и ни при каких условиях не является публичной офертой</p>
+    </div>
   </footer>
 </template>
 
@@ -35,11 +37,36 @@
   background-image: url("../images/our-office-mobile.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
+
+  @media (min-width: 1440px) {
+    background-image: url("../images/footer-bg-desktop.png");
+    height: 394px;
+    padding: 0;
+    position: relative;
+    top: -91px;
+    padding: 0 245px;
+  }
+}
+
+.footer__wrap {
+  display: contents;
+
+  @media (min-width: 1440px) {
+    position: relative;
+    top: 224px;
+    display: grid;
+    grid-template-columns: 257px 221px 155px;
+    grid-template-rows: 50px 100px;
+  }
 }
 
 .footer__logo-link {
   display: block;
   margin-bottom: 27px;
+
+  @media (min-width: 1440px) {
+    grid-row: span 2;
+  }
 }
 
 .footer__tel {
@@ -85,5 +112,9 @@
   line-height: 120%;
   font-weight: 200;
   color: #ffffff;
+
+  @media (min-width: 1440px) {
+    grid-column: span 2;
+  }
 }
 </style>

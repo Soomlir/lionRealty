@@ -22,9 +22,14 @@ import FooterComponent from '@/components/FooterComponent.vue';
   <FooterComponent />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .header-wrap {
   padding: 0 30px 77px;
   background-image: url("../images/header-bg-mobile.jpg");
+
+  @media(min-width: 1440px) {
+    padding: 0 147px 159px;
+    background-image: url("../images/header-bg-desktop.jpg");
+  }
 }
 </style>

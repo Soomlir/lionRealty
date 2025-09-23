@@ -36,3 +36,19 @@ img {
 a {
   text-decoration: none;
 }
+
+.br-mobile {
+  display: block;
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.br-desktop {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}

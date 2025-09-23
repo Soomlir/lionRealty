@@ -32,6 +32,7 @@
         </a>
       </li>
     </ul>
+    <a class="header__phone" href="tel:+79788881654">+7 (978) 888-1-654</a>
   </header>
 </template>
 
@@ -41,8 +42,11 @@
   align-items: center;
   padding-top: 28px;
   padding-bottom: 20px;
-}
 
+  @media (min-width: 1440px) {
+    padding-top: 39px;
+  }
+}
 
 .header__menu {
   width: 76px;
@@ -80,6 +84,15 @@
 
 .header__logo {
   margin-right: auto;
+
+  @media (min-width: 1440px) {
+    margin-left: 431px;
+
+    img {
+      width: 48px;
+      height: 76px;
+    }
+  }
 }
 
 .header__list {
@@ -105,6 +118,25 @@
 
   &--telegram {
     background-image: url("../images/social-telegram.svg");
+  }
+
+  @media (min-width: 1440px) {
+    width: 20px;
+    height: 20px;
+
+    background-size: 20px 20px;
+  }
+}
+
+.header__phone {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
   }
 }
 </style>

@@ -3,7 +3,7 @@
 <template>
   <section class="about">
     <a class="about__navigation" href="#!">&larr; в каталог</a>
-    <h1 class="about__heading">Дом 100 м<sup>2</sup> под Алуштой на участке 50 соток</h1>
+    <h1 class="about__heading">Дом 100 м<sup>2</sup> под Алуштой<br class="br-desktop"> на участке 50 соток</h1>
     <ul class="about__list">
       <li class="about__item">
         <p class="about__value">100 000 000 ₽</p>
@@ -13,7 +13,7 @@
         <p class="about__value">100 м<sup>2</sup></p>
         <p class="about__title">Площадь дома</p>
       </li>
-      <li class="about__item">
+      <li class="about__item about__item--price">
         <p class="about__value">1 000 000 ₽</p>
         <p class="about__title">Цена 1 кв. м.</p>
       </li>
@@ -32,16 +32,25 @@
       <a class="tags__link" href="#!">Закрытая территория</a>
     </div>
 
-    <a class="about__link-map" href="#!">Посмотреть на карте</a>
-    <a class="about__link-object" href="#!">Подробнее об объекте</a>
+    <div class="tags__links-wrap">
+      <a class="about__link-map" href="#!">Посмотреть на карте</a>
+      <a class="about__link-object" href="#!">Подробнее об объекте</a>
+    </div>
     <a class="about__play" href="#!">
       <span class="visually-hidden">Проиграть.</span>
-      <img src="/images/play-button.svg" alt="Проиграть.">
+      <img src="/images/play-button.svg" width="145" height="145" alt="Проиграть.">
     </a>
   </section>
 </template>
 
 <style lang="scss">
+.about {
+  @media (min-width: 1440px) {
+    position: relative;
+    padding-top: 72px;
+  }
+}
+
 .about__navigation {
   display: block;
   margin-bottom: 30px;
@@ -57,6 +66,11 @@
     top: 0;
     left: 0;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .about__heading {
@@ -69,6 +83,16 @@
     font-size: 11px;
     line-height: 11px;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 58px;
+    line-height: 64px;
+
+    sup {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
 }
 
 .about__list {
@@ -80,6 +104,18 @@
 
 .about__item {
   width: 120px;
+
+  @media (min-width: 1440px) {
+    width: 154px;
+
+    &:first-child {
+      order: -2;
+    }
+
+    &--price {
+      order: -1;
+    }
+  }
 }
 
 .about__value {
@@ -92,6 +128,10 @@
   sup {
     font-size: 11px;
     line-height: 11px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
   }
 }
 
@@ -107,6 +147,10 @@
   column-gap: 5px;
   row-gap: 10px;
   padding-bottom: 50px;
+
+  @media (min-width: 1440px) {
+    width: 526px;
+  }
 }
 
 .tags__link {
@@ -118,6 +162,21 @@
   text-decoration: none;
   background-color: #F2F2F2;
   border-radius: 5px;
+
+  @media (min-width: 1440px) {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.tags__links-wrap {
+  display: contents;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .about__link-map {
@@ -167,11 +226,34 @@
     background-image: url("../images/arrow-down.svg");
     background-repeat: no-repeat;
   }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 25px;
+    padding-left: 74px;
+
+    &::before {
+      width: 12px;
+      height: 12px;
+      left: 59px;
+    }
+  }
 }
 
 .about__play {
   width: 145px;
+  height: 145px;
   margin: 0 auto;
   display: block;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 232px;
+    right: 109px;
+
+    img {
+      width: 194px;
+      height: 194px;
+    }
+  }
 }
 </style>
